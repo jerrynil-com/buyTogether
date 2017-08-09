@@ -1,0 +1,21 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title is-4">新增店家</h1>
+    <form action="/stores" method="post">
+      <input type="hidden" name="authenticity_token" value=" <%= form_authenticity_token %> ">
+      <label>店家資訊</label>
+      <input type="text" name="name"><br>
+
+      <label>簡單描述</label><br>
+      <textarea name="description" cols="30" rows="5"></textarea><br>
+
+      <label>電話</label>
+      <input type="text" name="phone"><br>
+
+      <label>地址</label>
+      <input type="text" name="address"><br>
+
+      <input type="submit" value="送出">
+    </form>
+  </div>
+</section>
