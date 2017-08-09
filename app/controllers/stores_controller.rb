@@ -1,4 +1,5 @@
 class StoresController < ApplicationController
+
   def index
     @stores = Store.all
   end
@@ -8,14 +9,13 @@ class StoresController < ApplicationController
   end
 
   def create
-    store = Store.new
+    @store = Store.new(store_params)
+    @store.save
+    redirect_to stores_path
+  end
 
-    store.name = params[:name]
-    store.description = params[:description]
-    store.phone = params[:phone]
-    store.address = params[:address]
-
-    store.save
-    redirect_to '/stores'
+  private
+  def store_params
+    params.require(:store).permit(:name, :description, :address, :phone)
   end
 end

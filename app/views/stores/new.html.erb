@@ -1,21 +1,50 @@
-<section class="section">
+<section class="section store-form-section">
   <div class="container">
     <h1 class="title is-4">新增店家</h1>
-    <form action="/stores" method="post">
-      <input type="hidden" name="authenticity_token" value=" <%= form_authenticity_token %> ">
-      <label>店家資訊</label>
-      <input type="text" name="name"><br>
-
-      <label>簡單描述</label><br>
-      <textarea name="description" cols="30" rows="5"></textarea><br>
-
-      <label>電話</label>
-      <input type="text" name="phone"><br>
-
-      <label>地址</label>
-      <input type="text" name="address"><br>
-
-      <input type="submit" value="送出">
-    </form>
+    <div class="box">
+      <%= form_for @store do |f| %>
+        <div class="columns">
+          <div class="column is-7">
+            <div class="field">
+              <label class="label">商標</label>
+              <input id="store_logo" type="file">
+            </div>
+            <div class="field">
+              <label class="label">圖片</label>
+              <input id="store_picture" type="file">
+            </div>
+          </div>
+          <div class="column is-5">
+            <div class="field">
+              <%= f.label :name, '名稱', class: "label" %>
+              <div class="control">
+                <%= f.text_field :name, class: "input" %>
+              </div>
+            </div>
+            <div class="field">
+              <%= f.label :address, '地址', class: "label" %>
+              <div class="control">
+                <%= f.text_field :address, class: "input" %>
+              </div>
+            </div>
+            <div class="field">
+              <%= f.label :phone, '電話', class: "label" %>
+              <div class="control">
+                <%= f.text_field :phone, class: "input" %>
+              </div>
+            </div>
+            <div class="field">
+              <%= f.label :description, '簡短描述', class: "label" %>
+              <div class="control">
+                <%= f.text_area :description, class: "textarea" %>
+              </div>
+            </div>
+            <div class="field">
+              <%= f.submit '送出', class: "button is-primary is-medium is-fullwidth" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
 </section>
