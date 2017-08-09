@@ -1,5 +1,14 @@
 <div class="section">
   <div class="container">
     <h1 class="title is-4">這是 stores 首頁</h1>
+
+      <ul><% @stores.each do |store| %>
+          <li><%= store.name %></li>
+          <li><%= store.description %></li>
+          <li><%= store.phone %></li>
+          <li><%= store.address %></li>
+        <% end %>
+      </ul>
+
   </div>
 </div>
