@@ -1,0 +1,43 @@
+<%= form_for @store do |f| %>
+  <div class="columns">
+    <div class="column is-7">
+      <div class="field">
+        <label class="label">商標</label>
+        <input id="store_logo" type="file">
+      </div>
+      <div class="field">
+        <label class="label">圖片</label>
+        <input id="store_picture" type="file">
+      </div>
+    </div>
+    <div class="column is-5">
+      <div class="field">
+        <%= f.label :name, '名稱', class: "label" %>
+        <div class="control">
+          <%= f.text_field :name, class: "input" %>
+        </div>
+      </div>
+      <div class="field">
+        <%= f.label :address, '地址', class: "label" %>
+        <div class="control">
+          <%= f.text_field :address, class: "input" %>
+        </div>
+      </div>
+      <div class="field">
+        <%= f.label :phone, '電話', class: "label" %>
+        <div class="control">
+          <%= f.text_field :phone, class: "input" %>
+        </div>
+      </div>
+      <div class="field">
+        <%= f.label :description, '簡短描述', class: "label" %>
+        <div class="control">
+          <%= f.text_area :description, class: "textarea" %>
+        </div>
+      </div>
+      <div class="field">
+        <%= f.submit '送出', class: "button is-primary is-medium is-fullwidth" %>
+      </div>
+    </div>
+  </div>
+<% end %>

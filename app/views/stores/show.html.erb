@@ -28,7 +28,7 @@
               <%= link_to 'edit', edit_store_path(params[:id]) %>
             </div>
             <div class="card-footer-item">
-              <a>delete</a>
+              <%= link_to 'delete', store_path(@store), method: :delete, data: {confirm: '確定要刪除嗎？'} %>
             </div>
           </div>
         </div>

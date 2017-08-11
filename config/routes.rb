@@ -14,4 +14,7 @@ Rails.application.routes.draw do
   # update a store
   get '/stores/:id/edit' => 'stores#edit', as: 'edit_store'
   patch '/stores/:id' => 'stores#update', as: 'update_store'
+
+  #delete a store
+  delete 'stores/:id' => 'stores#destroy'
 end
