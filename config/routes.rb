@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   # create new stores
   get '/stores/new' => 'stores#new'
   post '/stores' => 'stores#create'
+
+  get 'stores/:id' => 'stores#show', as: 'store'
 end

@@ -1,12 +1,10 @@
 <nav class="nav has-shadow">
   <div class="container">
     <div class="nav-left">
-
       <!-- todo: 加上連結 -->
-      <a class="nav-item">
-        <%= image_tag 'logo', alt: 'Buy Together Logo' %>
-      </a>
-
+      <%= link_to root_path, class: 'nav-item' do%>
+        <%= image_tag 'logo' %>
+      <% end %>
     </div>
     <span class="nav-toggle">
       <span></span>
@@ -14,13 +12,11 @@
       <span></span>
     </span>
     <div class="nav-right nav-menu">
-
       <!--  todo: 加上連結 -->
-      <a class="nav-item is-tab is-active">店家資訊</a>
-      <a class="nav-item is-tab">提議</a>
-      <a class="nav-item is-tab">歷史資訊</a>
-      <a class="nav-item is-tab">帳戶管理</a>
-
+      <%= link_to '店家資訊', stores_path, class: 'nav-item is-tab is-active' %>
+      <%= link_to '提議', stores_path, class: 'nav-item is-tab' %>
+      <%= link_to '歷史資訊', stores_path, class: 'nav-item is-tab' %>
+      <%= link_to '帳戶管理', stores_path, class: 'nav-item is-tab' %>
     </div>
   </div>
 </nav>
