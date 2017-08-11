@@ -11,21 +11,21 @@
                 </figure>
               </div>
               <div class="media-content">
-                <p class="title is-4">Alpaca Cafe</p>
+                <p class="title is-4"><%= @store.name %></p>
                 <p class="subtitle is-6">@johnsmith</p>
               </div>
             </div>
             <div class="content has-description">
-              行下多她了地月有、蘭因使灣分面……不有調員集求你反死黨木有器印正...
+              <%= @store.description.truncate(50) %>
             </div>
             <div class="content">
-              地址：台北市羊駝路 65 號<br>
-              電話：0987-987-487
+              地址：<%= @store.address %><br>
+              電話：<%= @store.phone %>
             </div>
           </div>
           <div class="card-footer">
             <div class="card-footer-item">
-              <a>edit</a>
+              <%= link_to 'edit', edit_store_path(params[:id]) %>
             </div>
             <div class="card-footer-item">
               <a>delete</a>

@@ -9,9 +9,9 @@
             </figure>
           <% end %>
           <div class="card-content has-border-right">
-            <a class="button is-small is-primary is-outlined is-edit">
+            <%= link_to edit_store_path(store), class: 'button is-small is-primary is-outlined is-edit' do %>
               <i class="fa fa-pencil-square-o"></i>
-            </a>
+            <% end %>
             <div class="media">
               <div class="media-left">
                 <figure class="image is-48x48">

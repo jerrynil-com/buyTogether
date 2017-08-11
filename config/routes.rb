@@ -8,5 +8,10 @@ Rails.application.routes.draw do
   get '/stores/new' => 'stores#new'
   post '/stores' => 'stores#create'
 
-  get 'stores/:id' => 'stores#show', as: 'store'
+  #show a store
+  get '/stores/:id' => 'stores#show', as: 'store'
+
+  # update a store
+  get '/stores/:id/edit' => 'stores#edit', as: 'edit_store'
+  patch '/stores/:id' => 'stores#update', as: 'update_store'
 end
