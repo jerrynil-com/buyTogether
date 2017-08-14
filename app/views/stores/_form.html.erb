@@ -15,24 +15,36 @@
         <%= f.label :name, '名稱', class: "label" %>
         <div class="control">
           <%= f.text_field :name, class: "input" %>
+          <% @store.errors.full_messages_for(:name).each do |msg| %>
+            <p class="help is-danger"><%= msg %></p>
+          <% end %>
         </div>
       </div>
       <div class="field">
         <%= f.label :address, '地址', class: "label" %>
         <div class="control">
           <%= f.text_field :address, class: "input" %>
+          <% @store.errors.full_messages_for(:address).each do |msg| %>
+            <p class="help is-danger"><%= msg %></p>
+          <% end %>
         </div>
       </div>
       <div class="field">
         <%= f.label :phone, '電話', class: "label" %>
         <div class="control">
           <%= f.text_field :phone, class: "input" %>
+          <% @store.errors.full_messages_for(:phone).each do |msg| %>
+            <p class="help is-danger"><%= msg %></p>
+          <% end %>
         </div>
       </div>
       <div class="field">
         <%= f.label :description, '簡短描述', class: "label" %>
         <div class="control">
           <%= f.text_area :description, class: "textarea" %>
+          <% @store.errors.full_messages_for(:description).each do |msg| %>
+            <p class="help is-danger"><%= msg %></p>
+          <% end %>
         </div>
       </div>
       <div class="field">

@@ -14,9 +14,11 @@ class StoresController < ApplicationController
   end
 
   def update
-    @store.update store_params
-
-    redirect_to stores_path
+    if @store.update store_params
+      redirect_to stores_path
+    else
+      render 'edit'
+    end
   end
 
   def create
