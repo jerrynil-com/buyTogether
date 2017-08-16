@@ -2,12 +2,12 @@
   <div class="columns">
     <div class="column is-7">
       <div class="field">
-        <label class="label">商標</label>
-        <input id="store_logo" type="file">
+        <%= f.label :logo, '商標', class: 'label' %>
+        <%= f.file_field :logo %>
       </div>
       <div class="field">
-        <label class="label">圖片</label>
-        <input id="store_picture" type="file">
+        <%= f.label :image, '圖片', class: 'label' %>
+        <%= f.file_field :image %>
       </div>
     </div>
     <div class="column is-5">
