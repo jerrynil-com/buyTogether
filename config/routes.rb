@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'pages#homepage'
 
-  resources :stores
+  resources :stores do
+    resources :items
+  end
   # get '/stores' => 'stores#index'
   # # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

@@ -4,5 +4,8 @@ class Store < ApplicationRecord
 
   mount_uploader :image, StoreImageUploader
 
+  #relationships
+  has_many :items
+
   validates_presence_of :name, :description, :address, :phone
 end
