@@ -1,13 +1,13 @@
 <section class="section store-image-section">
   <div class="container">
     <figure class="image">
-      <img src="http://via.placeholder.com/1600x900" alt="placeholder" class="store-picture">
+      <%= image_tag @store.image %>
         <div class="card">
           <div class="card-content">
             <div class="media">
               <div class="media-left">
                 <figure class="image is-48x48">
-                  <img src="http://via.placeholder.com/48x48" alt="placeholder">
+                  <%= image_tag @store.logo %>
                 </figure>
               </div>
               <div class="media-content">
