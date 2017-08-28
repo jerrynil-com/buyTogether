@@ -54,7 +54,7 @@ group :development, :test do
   gem 'pry'
 
   #authentication
-  gem 'devise '
+  gem 'devise'
 end
 
 group :development do

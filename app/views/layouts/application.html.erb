@@ -10,9 +10,11 @@
 
   <body>
     <%= render 'navbar' %>
-
-    <%= yield %>
-
+    <section class="section">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </section>
     <%= render 'footer' %>
   </body>
 </html>
