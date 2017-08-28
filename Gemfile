@@ -52,6 +52,9 @@ group :development, :test do
 
   # for better debug
   gem 'pry'
+
+  #authentication
+  gem 'devise '
 end
 
 group :development do
