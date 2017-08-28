@@ -56,84 +56,21 @@
 
           <div class="card-content">
             <div class="columns is-multiline">
-              <div class="column is-4">
-                <div class="card">
-                  <div class="card-image">
-                    <figure class="image is-4by3">
-                      <img src="http://via.placeholder.com/1600x900" alt="placeholder">
-                    </figure>
-                  </div>
-                  <div class="card-content">
-                    <div>紅茶拿鐵</div>
-                    <div class="title is-5">$150</div>
-                  </div>
-                </div>
-              </div>
-              <div class="column is-4">
-                <div class="card">
-                  <div class="card-image">
-                    <figure class="image is-4by3">
-                      <img src="http://via.placeholder.com/1600x900" alt="placeholder">
-                    </figure>
-                  </div>
-                  <div class="card-content">
-                    <div>紅茶拿鐵</div>
-                    <div class="title is-5">$150</div>
+              <% store.items.each do |item|%>
+                <div class="column is-4">
+                  <div class="card">
+                    <div class="card-image">
+                      <figure class="image is-4by3">
+                        <%= image_tag item.image %>
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                      <div><%= item.name %></div>
+                      <div class="title is-5">$<%= item.price %></div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="column is-4">
-                <div class="card">
-                  <div class="card-image">
-                    <figure class="image is-4by3">
-                      <img src="http://via.placeholder.com/1600x900" alt="placeholder">
-                    </figure>
-                  </div>
-                  <div class="card-content">
-                    <div>紅茶拿鐵</div>
-                    <div class="title is-5">$150</div>
-                  </div>
-                </div>
-              </div>
-              <div class="column is-4">
-                <div class="card">
-                  <div class="card-image">
-                    <figure class="image is-4by3">
-                      <img src="http://via.placeholder.com/1600x900" alt="placeholder">
-                    </figure>
-                  </div>
-                  <div class="card-content">
-                    <div>紅茶拿鐵</div>
-                    <div class="title is-5">$150</div>
-                  </div>
-                </div>
-              </div>
-              <div class="column is-4">
-                <div class="card">
-                  <div class="card-image">
-                    <figure class="image is-4by3">
-                      <img src="http://via.placeholder.com/1600x900" alt="placeholder">
-                    </figure>
-                  </div>
-                  <div class="card-content">
-                    <div>紅茶拿鐵</div>
-                    <div class="title is-5">$150</div>
-                  </div>
-                </div>
-              </div>
-              <div class="column is-4">
-                <div class="card">
-                  <div class="card-image">
-                    <figure class="image is-4by3">
-                      <img src="http://via.placeholder.com/1600x900" alt="placeholder">
-                    </figure>
-                  </div>
-                  <div class="card-content">
-                    <div>紅茶拿鐵</div>
-                    <div class="title is-5">$150</div>
-                  </div>
-                </div>
-              </div>
+              <% end %>
             </div>
           </div>
         </div>

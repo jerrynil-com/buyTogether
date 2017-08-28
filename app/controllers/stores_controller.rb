@@ -3,7 +3,7 @@ class StoresController < ApplicationController
   before_action :set_store, only: [:show, :edit, :update, :destroy]
 
   def index
-    @stores = Store.all
+    @stores = Store.includes(:items)
   end
 
   def new
