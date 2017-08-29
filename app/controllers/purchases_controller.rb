@@ -1,5 +1,10 @@
 class PurchasesController < ApplicationController
   before_action :authenticate_user!
+  # before_action :set_purchase, only: [:show]
+
+  def index
+    @purchases = Purchase.all
+  end
 
   def new
     @purchase = Purchase.new
@@ -8,10 +13,14 @@ class PurchasesController < ApplicationController
   def create
     @purchase = current_user.purchases.build purchase_params
     if @purchase.save
-      redirect_to purchases_path
+      redirect_to purchase_path(@purchase)
     else
       render 'new'
     end
+  end
+
+  def show
+    @purchase = Purchase.find(params[:id])
   end
 
   private
