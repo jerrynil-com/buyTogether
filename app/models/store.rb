@@ -6,6 +6,7 @@ class Store < ApplicationRecord
 
   #relationships
   has_many :items
+  has_many :purchases
 
   validates_presence_of :name, :description, :address, :phone
 end
