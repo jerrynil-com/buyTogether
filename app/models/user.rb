@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   # relationship
   has_many :purchases
+  has_many :orders
 end
