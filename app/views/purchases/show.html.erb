@@ -57,23 +57,10 @@
 
             <%= form_for [@purchase, @order] do |f| %>
               <%= f.fields_for :ordered_items do |item_form| %>
-                <div class="field">
-                  <div class="control">
-                    <span class="select">
-                      <%= item_form.collection_select :item_id, @purchase.store.items, :id, :name %>
-                    </span>
-                  </div>
-                </div>
-                <div class="field">
-                  <div class="control">
-                    <%= item_form.number_field :quantity, class: 'input' %>
-                  </div>
-                </div>
-
-
+                <%= render 'ordered_item_fields', f: item_form %>
               <% end %>
               <div class="field">
-                <a class="button is-success is-outlined">新增商品</a>
+                <%= link_to_add_association '新增商品', f, :ordered_items, class: 'button is-success is-outlined' %>
               </div>
 
               <div class="field">
