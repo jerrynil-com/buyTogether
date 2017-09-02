@@ -1,6 +1,5 @@
 class PurchasesController < ApplicationController
   before_action :authenticate_user!
-  # before_action :set_purchase, only: [:show]
 
   def index
     @purchases = Purchase.all
@@ -21,6 +20,7 @@ class PurchasesController < ApplicationController
 
   def show
     @purchase = Purchase.find(params[:id])
+    @order = Order.find_by(user: current_user, purchase: @purchase)
   end
 
   private
