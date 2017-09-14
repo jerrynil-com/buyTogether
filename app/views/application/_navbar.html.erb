@@ -15,7 +15,7 @@
       <!--  todo: 加上連結 -->
       <%= link_to '店家資訊', stores_path, class: 'nav-item is-tab is-active' %>
       <%= link_to '提議', new_purchase_path, class: 'nav-item is-tab' %>
-      <%= link_to '歷史資訊', stores_path, class: 'nav-item is-tab' %>
+      <%= link_to '歷史資訊', history_path, class: 'nav-item is-tab' %>
       <%= link_to '帳戶管理', edit_user_registration_path, class: 'nav-item is-tab' %>
       <% if current_user %>
         <%= link_to '登出', destroy_user_session_path, method: :delete, class: 'nav-item is-tab' %>

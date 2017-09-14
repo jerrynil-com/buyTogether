@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   resources :purchases do
     resources :orders
   end
+
+  get 'history', to: 'orders#history'
+
   # get '/stores' => 'stores#index'
   # # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

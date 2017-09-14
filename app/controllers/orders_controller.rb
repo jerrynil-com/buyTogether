@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_purchase
+  before_action :set_purchase, except: [:history]
 
   def create
     @order = @purchase.orders.build order_params
@@ -19,6 +19,10 @@ class OrdersController < ApplicationController
     else
       render 'purchase/show'
     end
+  end
+
+  def history
+    @orders = current_user.orders.includes( purchase: :store, ordered_item: :item )
   end
 
   private
