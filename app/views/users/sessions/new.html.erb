@@ -26,6 +26,10 @@
               <%= f.submit 'Log in', class: 'button is-primary' %>
               <%= render "users/shared/links" %>
             </div>
+
+            <div class="field">
+              <%= link_to 'FB Login', user_facebook_omniauth_authorize_path %>
+            </div>
           <% end %>
         </div>
       </div>

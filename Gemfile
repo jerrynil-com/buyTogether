@@ -57,6 +57,7 @@ group :development, :test do
 
   #authentication
   gem 'devise'
+  gem 'omniauth-facebook'
 
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
